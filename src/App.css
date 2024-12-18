@@ -1,0 +1,235 @@
+/* *{
+  margin: 0;
+  padding: 0;
+}
+
+.main-div{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+ 
+}
+.child-div{
+ 
+  padding: 2vw;
+}
+figure{
+  display: flex;
+  padding: 5px;
+}
+.topicon{
+  width: 30px;
+  background-color: black;
+}
+.form-ctrl{
+  color: white;
+  padding: 3px;
+}
+.addItem{
+  background-color: black;
+ width: 15px;
+}
+.fa-regular,fa-pen-to-square{
+background-color: black;
+  width: 15px;
+}
+.fa-trash-can{
+background-color: black;
+  width: 15px;
+}
+ i {
+  font-size: 20px;
+  color: #666;
+}
+.eachItem{
+  display: flex;
+  
+}
+.todoBtn{
+  margin: 0 3px;
+  padding: 3px;
+}
+.edititem{
+  margin-right: 3px;
+}
+.form-ctrl{
+  width: 50%;
+  color: black;
+  background-color: white;
+} */
+ /* General reset and layout */
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+
+ /* Main container for the whole app */
+ .main-div {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   background-color: #333;
+ }
+
+ /* Child container */
+ .child-div {
+   background-color: white;
+   border-radius: 10px;
+   padding: 30px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   width: 100%;
+   max-width: 500px;
+   text-align: center;
+ }
+
+ /* Figure for title */
+ figure {
+   margin-bottom: 20px;
+ }
+
+ figure i {
+   font-size: 40px;
+   color: #007bff;
+ }
+
+ figcaption {
+   font-size: 20px;
+   color: #333;
+   font-weight: bold;
+   margin-top: 10px;
+ }
+
+ /* Input area and buttons */
+ .addItems {
+   display: flex;
+   justify-content: center;
+   gap: 10px;
+   margin-bottom: 20px;
+ }
+
+ .form-ctrl {
+   width: 80%;
+   padding: 10px;
+   font-size: 16px;
+   border: 2px solid #ccc;
+   border-radius: 5px;
+   outline: none;
+ }
+
+ .form-ctrl:focus {
+   border-color: #007bff;
+ }
+
+ .addItems i {
+   font-size: 25px;
+   cursor: pointer;
+   color: #007bff;
+   margin-top: 7px;
+   transition: color 0.3s ease;
+ }
+
+ /* Hover effect for icons */
+ .addItems i:hover {
+   color: #28a745;
+   /* Green color on hover for add/edit buttons */
+ }
+
+ .showItems {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+ }
+
+ .eachItem {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 12px;
+   background-color: #f9f9f9;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+ }
+
+ .eachItem h3 {
+   font-size: 18px;
+   color: #333;
+   flex: 1;
+ }
+
+ .todoBtn {
+   display: flex;
+   gap: 15px;
+ }
+
+ .todoBtn i {
+   font-size: 18px;
+   color: #666;
+   cursor: pointer;
+   transition: color 0.3s ease;
+ }
+
+ /* Hover effect for icons */
+ .todoBtn i:hover {
+   color: #007bff;
+   transform: scale(1.2);
+   /* Slightly enlarge on hover */
+ }
+
+ .todoBtn i.fa-pen-to-square:hover {
+   color: #28a745;
+   /* Green color for edit icon */
+ }
+
+ .todoBtn i.fa-trash-can:hover {
+   color: #dc3545;
+   /* Red color for delete icon */
+ }
+
+ /* Button to remove all items */
+ button {
+   background-color: #dc3545;
+   color: white;
+   border: none;
+   padding: 12px 20px;
+   margin-top: 10px;
+   border-radius: 5px;
+   font-size: 16px;
+   cursor: pointer;
+   width: 100%;
+   transition: background-color 0.3s ease;
+ }
+
+ button:hover {
+   background-color: #c82333;
+ }
+ @media (max-width: 480px) {
+   .main-div {
+     padding: 10px;
+   }
+
+   .child-div {
+     padding: 10px;
+     width: 100%;
+   }
+
+   .addItems .form-ctrl {
+     padding: 10px;
+   }
+
+   .eachItem h3 {
+     font-size: 14px;
+   }
+
+   .todoBtn i {
+     font-size: 16px;
+   }
+
+   button {
+     font-size: 14px;
+     padding: 8px;
+   }
+ }
